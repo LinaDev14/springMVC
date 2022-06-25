@@ -18,9 +18,17 @@ public class ControladorInicio {
 
         var mensaje = "Adios mundo con Thymeleaf";
 
+        var persona = new Persona();
+
+        persona.setNombre("Santiago");
+        persona.setApellido("Vlad");
+        persona.setEmail("santiagoVlad@gmail.com");
+        persona.setCelular("3215689651");
+
         log.info("Ejecutando el controlador Spring mvc");
         model.addAttribute("mensaje", mensaje);
         model.addAttribute("saludo", saludo);
+        model.addAttribute("persona", persona);
         return "index";
     }
 }
